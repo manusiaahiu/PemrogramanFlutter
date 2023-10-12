@@ -16,7 +16,13 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Text(
-            "Hallo",
+            "lrem ipsum dolor sit amet hadsghjagd",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              backgroundColor: Colors.amberAccent,
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            ),
             ),
         ),
       ),
