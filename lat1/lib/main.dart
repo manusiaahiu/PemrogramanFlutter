@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'inpu.dart';
+import 'uts.dart';
 
 void main() {
   runApp(MyApp());

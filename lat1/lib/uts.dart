@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'output.dart';
+import 'hasiluts.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -7,11 +7,9 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  TextEditingController nobpController = TextEditingController();
+  TextEditingController nipController = TextEditingController();
   TextEditingController namaController = TextEditingController();
-  TextEditingController matematikaController = TextEditingController();
-  TextEditingController algoritmaController = TextEditingController();
-  TextEditingController javaController = TextEditingController();
+  TextEditingController golonganController = TextEditingController();
 
   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
     borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -31,11 +29,9 @@ class _InputPageState extends State<InputPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            buildLinedTextField(nobpController, "NOBP"),
+            buildLinedTextField(nipController, "NOBP"),
             buildLinedTextField(namaController, "Nama"),
-            buildLinedTextField(matematikaController, "Nilai Matematika"),
-            buildLinedTextField(algoritmaController, "Nilai Algoritma"),
-            buildLinedTextField(javaController, "Nilai Java"),
+            buildLinedTextField(golonganController, "Nilai Matematika"),
             Center(
               child: ElevatedButton(
                 onPressed: () {
@@ -43,11 +39,9 @@ class _InputPageState extends State<InputPage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => ResultPage(
-                        nobp: nobpController.text,
+                        nip: nipController.text,
                         nama: namaController.text,
-                        nilaiMatematika: matematikaController.text,
-                        nilaiAlgoritma: algoritmaController.text,
-                        nilaiJava: javaController.text,
+                        golongan: golonganController.text,
                       ),
                     ),
                   );
@@ -87,6 +81,3 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
-
-
-
